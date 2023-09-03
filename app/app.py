@@ -5,10 +5,13 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from pymongo import MongoClient
 
-
+open_ai_key = os.environ.get("OPENAI_KEY")
+db_url = os.environ.get("DB_KEY")
+email_from = os.environ.get("FROM_EMAIL")
+email_from_pass = os.environ.get("FROM_EMAIL_PASS")
 app = Flask(__name__)
 
-client = MongoClient("mongodb+srv://agarawalayushi1:Maheshwari3105@cluster0.ahfncpx.mongodb.net/?retryWrites=true&w=majority")  # Replace with your MongoDB connection string
+client = MongoClient(db_url)  # Replace with your MongoDB connection string
 db = client["sop_data"]  
 collection = db["user_data"] 
 
@@ -75,7 +78,7 @@ def store_data():
 
 
 # Configure OpenAI API
-openai.api_key = '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'
+openai.api_key = open_ai_key
 
 
 @app.route("/")
@@ -96,8 +99,8 @@ def generate_sop():
     ).choices[0].text.strip()
 
     # Send email
-    from_email = 'agarawal.ayushi1.work@gmail.com'
-    from_password = 'tlnapgmmlhknkepl'
+    from_email = email_from
+    from_password = email_from_pass
     to_email = user_inputs["email"]
 
     subject = "Statement of Purpose"
