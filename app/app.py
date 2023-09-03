@@ -75,7 +75,7 @@ def store_data():
 
 
 # Configure OpenAI API
-openai.api_key = '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'
+openai.api_key = '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'
 
 
 @app.route("/")
