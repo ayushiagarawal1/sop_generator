@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>Statement of Purpose Generator</h1>
+        </div>
+
+        <form id="sop-form" method="POST" action="/store-data">
+
+            <div class="vertical-1">
+
+                <div class="row">
+                    <label for="name" class="form-label">Full Name:</label>
+                    <input type="text" id="name" name="name" required class="input-text"><br>
+                </div>
+                <div class="row">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" required class="input-text"><br>
+                </div>
+
+                <div class="row">
+                    <label for="age" class="form-label">Age:</label>
+                    <input type="number" id="age" name="age" required class="input-text"><br>
+                </div>
+
+                <div class="row">
+                    <label for="listening_score" class="form-label">English Scores - Listening</label>
+                    <input type="number" id="listening_score" name="listening_score" required class="input-text"
+                        style="width: 140px;"><br>
+                </div>
+
+                <div class="row">
+                    <label for="reading_score" class="form-label">English Scores - Reading</label>
+                    <input type="number" id="reading_score" name="reading_score" required class="input-text"
+                        style="width: 140px;"><br>
+                </div>
+
+                <div class="row">
+                    <label for="speaking_score" class="form-label">English Scores - Speaking</label>
+                    <input type="number" id="speaking_score" name="speaking_score" required class="input-text"
+                        style="width: 140px;"><br>
+                </div>
+
+                <div class="row">
+                    <label for="writing_score" class="form-label">English Scores - Writing</label>
+                    <input type="number" id="writing_score" name="writing_score" required class="input-text"
+                        style="width: 140px;"><br>
+                </div>
+
+                <div class="row">
+                    <label id="tution_fee" class="form-label" style="margin-left: 48px;">Did you pay your
+                          first year tuition?</label>
+                    <label style="font-size: 28px;"><input type="radio" name="tution_fee" value="yes">Yes</label>
+                    <label style="font-size: 28px;"><input type="radio" name="tution_fee" value="no">No</label>
+                </div>
+
+                <div class="row">
+                    <label for="paid_fees" class="form-label">If yes, then how much?</label>
+                    <input type="number" id="paid_fees" name="paid_fees" required class="input-text"
+                        style="width: 110px;"><br>
+                </div>
+
+                <div class="row">
+
+                    <label id="gic" class="form-label">Did you do a GIC?</label>
+                    <label style="font-size: 28px;"><input type="radio" name="gic" value="yes" >Yes</label>
+                    <label style="font-size: 28px;"><input type="radio" name="gic" value="no">No</label>
+                </div>
+
+                <div class="row">
+                    <label for="paid_gic" class="form-label">If yes, then how much?</label>
+                    <input type="number" id="paid_gic" name="paid_gic" required class="input-text"
+                        style="width: 110px;"><br>
+                </div>
+
+
+            </div>
+            <div class="vertical-2">
+                <div class="row">
+                    <label for="education" id="education" class="form-label">Highest Level of Education: </label>
+                    <select required class="input-text">
+                        <option selected>Choose</option>
+                        <option value="12">Grade 12</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="bachelors">Bachelors Degree</option>
+                        <option value="masters">Masters Degree</option>
+                        <option value="phd">PhD</option>
+                    </select>
+                </div>
+
+
+                <div class="row">
+                    <label for="past_institute" class="form-label">Institute where you completed your highest level of
+                        education: </label>
+                    <input type="text" id="past_institute" name="past_institute" required class="input-text">
+                </div>
+                <div class="row">
+                    <label for="program" class="form-label">What did you study?</label>
+                    <input type="text" id="program" name="program" required class="input-text">
+                </div>
+
+                <div class="row">
+                    <label for="country" class="form-label">Which country are you applying from?</label>
+                    <input type="text" id="country" name="country" required class="input-text">
+                </div>
+
+                <div class="row">
+                    <div class="left">
+                        <label for="work_experience" class="form-label">
+                            <div class="form-label">
+                                Do you have any relevant work experience?
+                                Write None if no work experience. <br>
+                            </div>
+
+                            <div class="form-label large-text">
+                                Provide the following details if yes: <br>
+                                Job Title <br>
+                                Company Name <br>
+                                Job duties <br>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="right">
+                        <textarea type="text" id="work_experience" name="work_experience" required
+                            class="input-textarea" style="margin-top: 80px;"
+                            placeholder="
+    Sample Answer: I worked as a Sales Manager at Effizient Immigration Inc from Jan 2022 till Feb 2023.In this role, I managed sales operations, reaching out to leads, lead the outreach program, ensured meeting monthly targets."></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="left">
+                        <label for="country" class="form-label" style="height: 60px; margin-bottom: 60px;">What are your
+                            future goals?</label>
+                    </div>
+                    <div class="right">
+                        <textarea name="future_goals" required id="future_goals" class="input-textarea"
+                            placeholder="Write your future goals..."></textarea>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="vertical-3">
+                <div class="row">
+                    <label for="institute" class="form-label">What institute did you get admitted to in Canada?</label>
+                    <input type="text" id="institute" name="institute" required class="input-text">
+                </div>
+
+                <div class="row">
+                    <label for="admitted_program" class="form-label">What is your program of study in Canada?</label>
+                    <input type="text" id="admitted_program" name="admitted_program" required class="input-text">
+                </div>
+            </div>
+
+            <div class="vertical-4">
+                <div class="r">
+                    <button type="submit">Generate and Send</button>
+                </div>
+            </div>
+        </form>
+        <h1 id="result"></h1>
+    </div>
+    <script src="../static/index.js"></script>
+</body>
+
+</html>
