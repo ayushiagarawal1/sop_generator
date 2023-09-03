@@ -96,7 +96,7 @@ def generate_sop():
     generated_sop = openai.Completion.create(
         engine="text-davinci-003",
         prompt=prompt,
-        max_tokens=1800  # Adjust as needed
+        max_tokens=900  # Adjust as needed
     ).choices[0].text.strip()
 
     # Send email
