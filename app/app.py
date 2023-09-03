@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import openai
 import smtplib
+import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from pymongo import MongoClient
