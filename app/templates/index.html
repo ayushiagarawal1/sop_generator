@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -166,7 +167,12 @@
 
             <div class="vertical-4">
                 <div class="r">
-                    <button type="submit">Generate and Send</button>
+                    <button type="submit">Generate and Send
+                        <div id="loading-screen" style="display: none;">
+                            <h1>Generating...</h1>
+                        </div>
+                        
+                    </button>
                 </div>
             </div>
         </form>
