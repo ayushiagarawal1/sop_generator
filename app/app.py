@@ -100,8 +100,8 @@ def generate_sop():
     ).choices[0].text.strip()
 
     # Send email
-    from_email = 'agarawal.ayushi1.work@gmail.com'
-    from_password = 'tlnapgmmlhknkepl'
+    from_email = email_from
+    from_password = email_from_pass
     to_email = user_inputs["email"]
 
     subject = "Statement of Purpose"
